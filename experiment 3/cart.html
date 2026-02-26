@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Cart - Wellfound</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-logo">Wellfound</div>
+        <ul class="navbar-menu">
+            <li><a href="index.html#jobs">Jobs</a></li>
+            <li><a href="index.html#companies">Companies</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="navbar-auth">
+            <button class="btn btn-secondary">Sign In</button>
+            <button class="btn btn-primary">Sign Up</button>
+        </div>
+    </div>
+</nav>
+
+<section class="cart-section">
+    <div class="container">
+        <div class="cart-box">
+            <h2 class="box-title">Post a Job</h2>
+            <form id="jobForm" class="job-form">
+                <input type="text" id="companyName" class="form-input" placeholder="Company Name" required>
+                <input type="text" id="jobPosition" class="form-input" placeholder="Job Position" required>
+                <input type="text" id="location" class="form-input" placeholder="Location" required>
+                <div class="form-row">
+                    <input type="number" id="salaryMin" class="form-input" placeholder="Salary Min" required>
+                    <input type="number" id="salaryMax" class="form-input" placeholder="Salary Max" required>
+                </div>
+                <textarea id="jobDescription" class="form-input" placeholder="Job Description" rows="4" required></textarea>
+                <button type="submit" class="btn btn-primary">Publish Job</button>
+            </form>
+        </div>
+
+        <div class="cart-box">
+            <h2 class="box-title">Search Jobs</h2>
+            <div class="search-box">
+                <input type="text" id="searchJobsInput" class="form-input" placeholder="Search by title, company, or location...">
+            </div>
+            <div id="searchResults" class="jobs-list">
+                <p class="empty-msg">Enter search terms to find jobs</p>
+            </div>
+        </div>
+
+        <div class="cart-box">
+            <h2 class="box-title">Your Posted Jobs</h2>
+            <div id="postedJobs" class="jobs-list">
+                <p class="empty-msg">No jobs posted yet</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="editModal" class="modal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-box">
+        <div class="modal-header">
+            <h3 class="modal-title">Edit Job</h3>
+            <button type="button" class="modal-close" id="closeModal">×</button>
+        </div>
+        <form id="editForm" class="job-form">
+            <input type="text" id="editCompanyName" class="form-input" placeholder="Company Name" required>
+            <input type="text" id="editJobPosition" class="form-input" placeholder="Job Position" required>
+            <input type="text" id="editLocation" class="form-input" placeholder="Location" required>
+            <div class="form-row">
+                <input type="number" id="editSalaryMin" class="form-input" placeholder="Salary Min" required>
+                <input type="number" id="editSalaryMax" class="form-input" placeholder="Salary Max" required>
+            </div>
+            <textarea id="editJobDescription" class="form-input" placeholder="Job Description" rows="4" required></textarea>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-secondary" id="cancelEdit">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4 class="footer-title">Wellfound</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">For Candidates</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Browse Jobs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">For Companies</h4>
+                <ul class="footer-links">
+                    <li><a href="cart.html">Post a Job</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="cart.js"></script>
+</body>
+</html>

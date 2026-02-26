@@ -1,5 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.navbar-menu a');
     
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+
     const viewJobButtons = document.querySelectorAll('.job-footer .btn-primary');
     viewJobButtons.forEach(button => {
         button.addEventListener('click', function() {
