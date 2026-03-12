@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+</head>
+<body>
+<h2>Expense Tracker</h2>
+<input type="text" id="name" placeholder="Expense Name">
+<input type="number" id="amount" placeholder="Amount">
+<select id="category">
+    <option value="Food">Food</option>
+    <option value="Travel">Travel</option>
+    <option value="Shopping">Shopping</option>
+</select>
+<br><br>
+<button onclick="addExpense()">Add Expense</button>
+<button onclick="updateExpense()">Update Expense</button>
+<h3>Expenses</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody id="expenseList"></tbody>
+</table>
+<script src="expense_tracker.js"></script>
+</body>
+</html>
